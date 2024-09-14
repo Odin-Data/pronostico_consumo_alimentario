@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Consumo</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Incluir Chart.js -->
+
+</head>
+<body>
+
+    <!-- Header con el título y subtítulo -->
+    <header>
+        <h1>PREDICCIÓN CONSUMO PER CÁPITA DE ALIMENTOS</h1>
+        <h2>Ingrese los datos</h2>
+    </header>
+    <!-- Lista desplegable de alimentos -->
+    <div class="centered-select">
+        <label for="alimentos">Primero seleccionar serie de alimento y actualizar fechas</label>
+        <select id="alimentos" name="alimentos" required>
+            <option value="" disabled selected>Selecciona un alimento</option>
+            <option value="T.FRUTAS FRESCAS">T.FRUTAS FRESCAS</option>
+            <option value="T.HORTALIZAS FRESCAS">T.HORTALIZAS FRESCAS</option>
+            <option value="PAN">PAN</option>
+            <option value="TOTAL CARNE">TOTAL CARNE</option>
+            <option value="TOTAL PESCA">TOTAL PESCA</option>
+            <option value="PLATOS PREPARADOS">PLATOS PREPARADOS</option>
+            <option value="TOTAL LECHE LIQUIDA">TOTAL LECHE LIQUIDA</option>
+            <option value="DERIVADOS LACTEOS">DERIVADOS LACTEOS</option>
+        </select>
+    </div>
+
+    <form id="consumoForm">
+        <!-- Fecha con 12 recuadros -->
+        <div class="form-group">
+            <label for="fecha">Fecha</label>
+            <div class="grid-inputs">
+                <!-- Recuadros para la fecha sin el atributo readonly -->
+                <input type="text" id="field1">
+                <input type="text" id="field2">
+                <input type="text" id="field3">
+                <input type="text" id="field4">
+                <input type="text" id="field5">
+                <input type="text" id="field6">
+                <input type="text" id="field7">
+                <input type="text" id="field8">
+                <input type="text" id="field9">
+                <input type="text" id="field10">
+                <input type="text" id="field11">
+                <input type="text" id="field12">
+            </div>
+        </div>
+
+        <!-- Botón de actualizar fechas -->
+        <button type="button" id="actualizarFechas">Actualizar Fechas</button>
+
+        <!-- Consumo -->
+        <div class="form-group">
+            <label for="consumo">Consumo</label>
+            <div class="grid-inputs">
+                <input type="number" id="consumo1" name="consumo[]" step="0.01" min="0" required>
+                <input type="number" id="consumo2" name="consumo[]" step="0.01" min="0" required>
+                <input type="number" id="consumo3" name="consumo[]" step="0.01" min="0" required>
+                <input type="number" id="consumo4" name="consumo[]" step="0.01" min="0" required>
+                <input type="number" id="consumo5" name="consumo[]" step="0.01" min="0" required>
+                <input type="number" id="consumo6" name="consumo[]" step="0.01" min="0" required>
+                <input type="number" id="consumo7" name="consumo[]" step="0.01" min="0" required>
+                <input type="number" id="consumo8" name="consumo[]" step="0.01" min="0" required>
+                <input type="number" id="consumo9" name="consumo[]" step="0.01" min="0" required>
+                <input type="number" id="consumo10" name="consumo[]" step="0.01" min="0" required>
+                <input type="number" id="consumo11" name="consumo[]" step="0.01" min="0" required>
+                <input type="number" id="consumo12" name="consumo[]" step="0.01" min="0" required>
+            </div>
+        </div>
+
+        <!-- Gasto -->
+        <div class="form-group">
+            <label for="gasto">Gasto</label>
+            <div class="grid-inputs">
+                <input type="number" id="gasto1" name="gasto[]" step="0.01" min="0" required>
+                <input type="number" id="gasto2" name="gasto[]" step="0.01" min="0" required>
+                <input type="number" id="gasto3" name="gasto[]" step="0.01" min="0" required>
+                <input type="number" id="gasto4" name="gasto[]" step="0.01" min="0" required>
+                <input type="number" id="gasto5" name="gasto[]" step="0.01" min="0" required>
+                <input type="number" id="gasto6" name="gasto[]" step="0.01" min="0" required>
+                <input type="number" id="gasto7" name="gasto[]" step="0.01" min="0" required>
+                <input type="number" id="gasto8" name="gasto[]" step="0.01" min="0" required>
+                <input type="number" id="gasto9" name="gasto[]" step="0.01" min="0" required>
+                <input type="number" id="gasto10" name="gasto[]" step="0.01" min="0" required>
+                <input type="number" id="gasto11" name="gasto[]" step="0.01" min="0" required>
+                <input type="number" id="gasto12" name="gasto[]" step="0.01" min="0" required>
+            </div>
+        </div>
+
+        <!-- Precio -->
+        <div class="form-group">
+            <label for="precio">Precio</label>
+            <div class="grid-inputs">
+                <input type="number" id="precio1" name="precio[]" step="0.01" min="0" required>
+                <input type="number" id="precio2" name="precio[]" step="0.01" min="0" required>
+                <input type="number" id="precio3" name="precio[]" step="0.01" min="0" required>
+                <input type="number" id="precio4" name="precio[]" step="0.01" min="0" required>
+                <input type="number" id="precio5" name="precio[]" step="0.01" min="0" required>
+                <input type="number" id="precio6" name="precio[]" step="0.01" min="0" required>
+                <input type="number" id="precio7" name="precio[]" step="0.01" min="0" required>
+                <input type="number" id="precio8" name="precio[]" step="0.01" min="0" required>
+                <input type="number" id="precio9" name="precio[]" step="0.01" min="0" required>
+                <input type="number" id="precio10" name="precio[]" step="0.01" min="0" required>
+                <input type="number" id="precio11" name="precio[]" step="0.01" min="0" required>
+                <input type="number" id="precio12" name="precio[]" step="0.01" min="0" required>
+            </div>
+        </div>
+
+        <!-- Gasto exógeno -->
+        <div class="form-group">
+            <label for="gastoExogenas">Gasto exógeno</label>
+            <div class="grid-inputs">
+                <input type="number" id="gastoExo1" name="gasto_exogenas[]" step="0.01" min="0" required>
+                <input type="number" id="gastoExo2" name="gasto_exogenas[]" step="0.01" min="0" required>
+                <input type="number" id="gastoExo3" name="gasto_exogenas[]" step="0.01" min="0" required>
+                <input type="number" id="gastoExo4" name="gasto_exogenas[]" step="0.01" min="0" required>
+                <input type="number" id="gastoExo5" name="gasto_exogenas[]" step="0.01" min="0" required>
+                <input type="number" id="gastoExo6" name="gasto_exogenas[]" step="0.01" min="0" required>
+                <input type="number" id="gastoExo7" name="gasto_exogenas[]" step="0.01" min="0" required>
+                <input type="number" id="gastoExo8" name="gasto_exogenas[]" step="0.01" min="0" required>
+                <input type="number" id="gastoExo9" name="gasto_exogenas[]" step="0.01" min="0" required>
+                <input type="number" id="gastoExo10" name="gasto_exogenas[]" step="0.01" min="0" required>
+                <input type="number" id="gastoExo11" name="gasto_exogenas[]" step="0.01" min="0" required>
+                <input type="number" id="gastoExo12" name="gasto_exogenas[]" step="0.01" min="0" required>
+            </div>
+        </div>
+
+        <!-- Precio exógeno -->
+        <div class="form-group">
+            <label for="precioExogenas">Precio exógeno</label>
+            <div class="grid-inputs">
+                <input type="number" id="precioExo1" name="precio_exogenas[]" step="0.01" min="0" required>
+                <input type="number" id="precioExo2" name="precio_exogenas[]" step="0.01" min="0" required>
+                <input type="number" id="precioExo3" name="precio_exogenas[]" step="0.01" min="0" required>
+                <input type="number" id="precioExo4" name="precio_exogenas[]" step="0.01" min="0" required>
+                <input type="number" id="precioExo5" name="precio_exogenas[]" step="0.01" min="0" required>
+                <input type="number" id="precioExo6" name="precio_exogenas[]" step="0.01" min="0" required>
+                <input type="number" id="precioExo7" name="precio_exogenas[]" step="0.01" min="0" required>
+                <input type="number" id="precioExo8" name="precio_exogenas[]" step="0.01" min="0" required>
+                <input type="number" id="precioExo9" name="precio_exogenas[]" step="0.01" min="0" required>
+                <input type="number" id="precioExo10" name="precio_exogenas[]" step="0.01" min="0" required>
+                <input type="number" id="precioExo11" name="precio_exogenas[]" step="0.01" min="0" required>
+                <input type="number" id="precioExo12" name="precio_exogenas[]" step="0.01" min="0" required>
+            </div>
+        </div>
+
+        <!-- Botón de enviar -->
+        <button type="submit">Enviar</button>
+    </form>
+
+    <!-- Elemento para el gráfico -->
+    <div class="form-group">
+        <div style="width: 80%; margin: 0 auto;">
+        <h2>Gráfico de Predicciones</h2>
+        <canvas id="prediccionesChart"></canvas>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script> <!-- Enlace al archivo JS -->
+
+</body>
+</html>

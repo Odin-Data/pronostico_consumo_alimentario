@@ -1,0 +1,135 @@
+/* General del body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px; /* Añade espacio para evitar contenido pegado al borde */
+    box-sizing: border-box;
+    height: auto; /* Elimina 100vh y ajusta al contenido */
+}
+
+/* Estilo del header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Estilo del formulario */
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.centered-select {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos dentro de este contenedor */
+    margin-bottom: 20px;
+}
+
+.centered-select label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}
+
+.centered-select select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 50%; /* Ajusta el ancho según tus necesidades */
+    max-width: 300px; /* Ancho máximo del select */
+    min-width: 200px; /* Ancho mínimo */
+    margin: 0 auto; /* Centra horizontalmente */
+    display: block; /* Asegura que el elemento sea un bloque y respete el centrado */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 50%; /* Ancho relativo al contenedor */
+    max-width: 300px; /* Ancho máximo del select */
+    min-width: 200px; /* Ancho mínimo */
+    margin: 0 auto; /* Centrar horizontalmente */
+    display: block; /* Asegura que el elemento sea un bloque y respete el centrado */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+/* Estilo de los inputs en grid */
+.grid-inputs {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(100px, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.grid-inputs input[type="text"], .grid-inputs input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+/* Estilo del botón */
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#prediccionesChart {
+    width: 100% !important; /* Asegura que el canvas ocupe todo el ancho del contenedor */
+    height: 400px; /* Ajusta la altura del canvas */
+    max-width: 100%; /* Evita que el canvas se desborde del contenedor */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+    margin: 0 auto; /* Centra el canvas horizontalmente */
+}
