@@ -1,6 +1,6 @@
 # ANÁLISIS DEL CONSUMO ALIMENTARIO EN ESPAÑA 
 ## MODELO DE PRONÓSTICO DE CONSUMO POR GRUPOS DE ALIMENTOS
-Este repositorio proporciona un análisis exhaustivo de los datos de consumo alimentario en España, utilizando técnicas avanzadas de análisis y modelización. Los principales componentes del proyecto son:
+Este repositorio proporciona un análisis de los datos de consumo alimentario en España, con el objetivo de modelizar el consumo per cápita de diferentes series de alimentos. Los principales componentes del proyecto son:
 
 1. Análisis Exploratorio de Datos (EDA):
 Realización de un análisis exhaustivo de los datos de consumo alimentario para identificar patrones, tendencias y anomalías en el comportamiento del consumo.
@@ -9,7 +9,7 @@ Realización de un análisis exhaustivo de los datos de consumo alimentario para
 Estudio End-to-End (E2E) de modelos de series temporales tanto univariantes como multivariantes.
 
 3. Productivización del Modelo:
-Implementación del modelo seleccionado utilizando Flask para su despliegue y accesibilidad en un entorno web.
+Creación de una API y una pequeña aplicación web para el despliegue del modelo.
 
 ## Datasets
 Los datos utilizados en este estudio provienen del Panel de Consumo Alimentario en Hogares, gestionado por el Ministerio de Agricultura, Pesca y Alimentación y elaborado con información proporcionada por TAYLOR NELSON SOFRES S.A.U. Este panel ofrece una visión detallada de la demanda de alimentos en los hogares españoles, incluyendo información sobre las compras realizadas, su costo y las características de los hogares. El panel abarca todos los hogares de la Península, Baleares y Canarias, excluyendo Ceuta y Melilla. Es importante destacar que no se consideran las compras realizadas por empresas, turistas o en establecimientos de hostelería.
@@ -24,8 +24,8 @@ Contiene los conjuntos de datos transformados y procesados en formato .csv y .pk
 ## Notebooks
 Este repositorio incluye 5 notebooks en Jupyter que detallan cada etapa del análisis y la modelización, así como los resultados obtenidos y las decisiones tomadas durante el proceso.
 - TFM_01_crear_datasets: En este primer notebook se desarrolla el dataset de trabajo a partir de la fuente de datos original y se almacenan los nuevos datasets en formato .csv.
-- TFM_02_depurar_datasets: En este notebook se depuran los datasets y se almacenan los nuevos dataframes en formato pickle, para que en los siguientes notebooks se trabaje con estos datos.
-- TFM_03_exploracion_EDA: Se realiza una exploración de los conjuntos de datos. Este notebook está apoyado con el desarrollo de un dashboard en Tableau.
+- TFM_02_depurar_datasets: En este notebook se depuran los datasets y se almacenan los nuevos en formato pickle y .csv, para que en los siguientes notebooks se trabaje con estos datos.
+- TFM_03_exploracion_EDA: Se realiza una exploración de los conjuntos de datos.
 - TFM_04_modelos_series: Se lleva a cabo un estudio E2E con diferentes modelos univariantes y multivariantes, evaluando su rendimiento.
 - TFM_05_API: Definición de la API y pruebas de comunicación.
 
